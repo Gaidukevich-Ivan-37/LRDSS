@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+/* Общие стили для всей страницы */
+body {
+  background-image: url('./Phon.jpg'); /* Задний фон с изображением */
+  background-size: cover; /* Растягивает фон на всю площадь */
+  background-repeat: no-repeat; /* Запрещает повторение фона */
+  background-attachment: fixed; /* Фон прикреплен к странице */
+  color: #fff; /* Цвет текста белый */
+  font-family: 'Arial', sans-serif; /* Шрифт текста */
+  margin: 0; /* Убирает отступы по умолчанию */
+  display: flex; /* Контейнер с флекс-раскладкой */
+  justify-content: center; /* Выравнивание по горизонтали по центру */
+  align-items: center; /* Выравнивание по вертикали по центру */
+  height: 100vh; /* Высота экрана */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Стили для контейнера с игрой */
+.container {
+  display: flex; /* Флекс-контейнер */
+  flex-direction: column; /* Колонки */
+  align-items: center; /* Выравнивание по центру */
+  text-align: center; /* Выравнивание текста по центру */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Стили для заголовка */
+h1 {
+  font-size: 3rem; /* Размер шрифта */
+  margin-bottom: 20px; /* Отступ снизу */
+  color: #ff6600; /* Цвет текста */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Стили для кнопки "Play" на стартовом экране */
+.start-button {
+  background-color: #ff6600; /* Цвет фона кнопки */
+  color: #fff; /* Цвет текста */
+  font-size: 2rem; /* Размер шрифта */
+  border: none; /* Убирает границу */
+  padding: 20px 40px; /* Внутренние отступы */
+  cursor: pointer; /* Изменяет курсор при наведении */
+  margin: 20px 0; /* Внешний отступ сверху и снизу */
+  align-self: center; /* Выравнивание по центру */
 }
 
-.App-link {
-  color: #61dafb;
+/* Стили для игровой доски */
+.board {
+  display: grid; /* Сетка */
+  grid-template-columns: repeat(3, 150px); /* 3 столбца по 150px каждый */
+  gap: 5px; /* Отступы между элементами */
+  background-color: #ff6600; /* Цвет фона */
+  padding: 10px; /* Внутренние отступы */
+  border-radius: 10px; /* Скругленные углы */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Стили для отдельной ячейки на игровой доске */
+.square {
+  display: flex; /* Флекс-контейнер */
+  justify-content: center; /* Выравнивание по горизонтали по центру */
+  align-items: center; /* Выравнивание по вертикали по центру */
+  width: 150px; /* Ширина */
+  height: 150px; /* Высота */
+  background-color: #222; /* Цвет фона */
+  font-size: 2rem; /* Размер шрифта */
+  font-weight: bold; /* Жирный шрифт */
+  cursor: pointer; /* Изменяет курсор при наведении */
+  color: #ff6600; /* Цвет текста */
+}
+
+/* Стили для контейнера кнопок и статуса */
+.button-container {
+  display: flex; /* Флекс-контейнер */
+  align-items: center; /* Выравнивание по центру */
+  justify-content: center; /* Выравнивание по центру */
+  flex-direction: column; /* Колонки */
+  margin: 10px; /* Внешний отступ */
+}
+
+/* Стили для кнопки "Reset Game" */
+.button {
+  background-color: #ff6600; /* Цвет фона кнопки */
+  color: #fff; /* Цвет текста */
+  padding: 15px 30px; /* Внутренние отступы */
+  font-size: 2rem; /* Размер шрифта */
+  border: none; /* Убирает границу */
+  cursor: pointer; /* Изменяет курсор при наведении */
+  align-self: center; /* Выравнивание по центру */
+}
+
+/* Стили для статуса игры */
+.status {
+  font-size: 2rem; /* Размер шрифта */
+  font-weight: bold; /* Жирный шрифт */
+  color: #ff6600; /* Цвет текста */
+}
+
+/* Стили для Хэллоуина (дополнительные стили для особого эффекта) */
+body.halloween {
+  background-color: orange; /* Задний фон оранжевый */
+}
+
+/* Стили для отключения выделения текста мышью */
+.no-select {
+  user-select: none; /* Запрет выделения текста */
+}
+
+/* Дополнительные стили для кнопки звука */
+.sound-button {
+  cursor: pointer; /* Изменяет курсор при наведении */
+}
+
+/* Стили для кнопки звука при наведении */
+.sound-button:hover {
+  cursor: pointer; /* Изменяет курсор при наведении */
+}
+
+/* Дополнительные стили для отключения выделения текста */
+.no-select {
+  user-select: none; /* Запрет выделения текста */
 }
